@@ -1,0 +1,52 @@
+\chapter{Sample Chapter}
+\label{chap:sample}
+
+\section{Introduction}
+This is a sample chapter demonstrating various features and formatting options in \LaTeX. We will cover tables, source code listings, images, citations, and references.
+
+\section{Tables}
+Table~\ref{tab:example} is an example of a basic table in \LaTeX.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Header 1 & Header 2 & Header 3 \\
+        \hline
+        Row 1, Col 1 & Row 1, Col 2 & Row 1, Col 3 \\
+        Row 2, Col 1 & Row 2, Col 2 & Row 2, Col 3 \\
+        \hline
+    \end{tabular}
+    \caption{An example table}
+    \label{tab:example}
+\end{table}
+
+\section{Source Code Listings}
+Listing~\ref{lst:example} shows a simple Python code snippet.
+
+\begin{listing}[H]
+\begin{minted}{python}
+def hello_world():
+    print("Hello, World!")
+
+hello_world()
+\end{minted}
+\caption{A simple Python program}
+\label{lst:example}
+\end{listing}
+
+\section{Images}
+Figure~\ref{fig:example} illustrates how to include an image in your document.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/logos/X_logo_RS.pdf}
+    \caption{An example image}
+    \label{fig:example}
+\end{figure}
+
+\section{Citations and References}
+You can cite references from your bibliography file, like this~\cite{sampleArticle}. For more details on the mentioned concept, refer to Chapter~\ref{chap:sample}.
+
+\section{Conclusion}
+This chapter provided examples of various common elements in a \LaTeX document

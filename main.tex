@@ -1,0 +1,92 @@
+\documentclass{template}
+
+%---------------------------------------------------------------------------
+%| Text Substitutions                                                      |
+%---------------------------------------------------------------------------
+\company{}
+\university{}
+\universityGer{}
+\documentType{}
+\authorName{}
+\submissionDate{}
+\projectDuration{}
+\uniAdvisor{}
+\compAdvisor{}
+\uniDepartment{}
+\uniDepartmentGer{}
+\compDepartment{}
+\thesisTitle{}
+\thesisTitleGer{}
+
+
+%----------------------------------------------------------------------------------------------------------
+%| BEGIN DOCUMENT                                                                                        |
+%----------------------------------------------------------------------------------------------------------
+\begin{document}
+
+\onehalfspacing
+\pagenumbering{gobble}
+
+%---------------------------------------------------------------------------
+%| COVER PAGE                                                               |
+%---------------------------------------------------------------------------
+\MakeFrontCover
+
+%---------------------------------------------------------------------------
+%| FRONT MATTER                                                             |
+%---------------------------------------------------------------------------
+%\input{chapters/B_FirstPage.tex}
+\input{appendices/B_AuthorDeclaration.tex}
+\input{appendices/C_Acknowledgements.tex}
+\normalsize
+\input{chapters/00_Abstract.tex}
+\cleardoublepage
+
+%---------------------------------------------------------------------------
+%| TABLE OF CONTENTS                                                        |
+%---------------------------------------------------------------------------
+\clearpage
+\ofoot{\pagemark}
+\footnotesize
+\pagenumbering{roman}
+\pagestyle{scrheadings}
+\tableofcontents
+
+%+---------------------------------------------------------------------------+
+%| MAIN chapters                                                             |
+%+---------------------------------------------------------------------------+
+\clearpage
+\ofoot{\pagemark}
+\setcounter{secnumdepth}{2}
+\normalsize
+\pagenumbering{arabic}
+\cleardoublepage
+
+%--------------------------------------------
+%| INCLUDE chapters                         |
+%--------------------------------------------
+\input{chapters/0X_Example.tex}
+%--------------------------------------------
+%| APPENDIX                                 |
+%--------------------------------------------
+\appendix
+% ... (include your appendices here)
+
+%--------------------------------------------
+%| ABBREVIATIONS, BIBLIOGRAPHY                  |
+%--------------------------------------------
+\input{Bibliography.tex}
+
+%--------------------------------------------
+%| LIST OF FIGURES, ETC...                     |
+%--------------------------------------------
+%\normalsize{\listoffigures}
+%\normalsize{\listoftables}
+%\normalsize{\lstlistoflistings}
+
+%--------------------------------------------
+%| BACK COVER                                  |
+%--------------------------------------------
+% \input{chapters/Z_BackCover.tex}
+
+\end{document}
