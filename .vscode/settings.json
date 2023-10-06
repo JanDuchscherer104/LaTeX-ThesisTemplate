@@ -2,10 +2,19 @@
     //  ===============================
     //    LaTeX Workshop
     //  ===============================
-    "latex-workshop.bibtex-fields.sort.enabled": true,
-    "latex-workshop.bind.altKeymap.enabled": true,
-    "latex-workshop.bibtex-format.tab": "4 spaces",
     "latex-workshop.latex.tools": [
+        {
+            "name": "latexindent",
+            "command": "latexindent",
+            "args": [
+                "-c",
+                "%DIR%/",
+                "%TMPFILE%",
+                "main.tex",
+                "%DOC%.tex",
+                "-y=defaultIndent: '%INDENT%'"
+            ]
+        },
         {
             "name": "latexmk",
             "command": "latexmk",
@@ -18,6 +27,43 @@
                 "-outdir=output",
                 "%DOC%"
             ]
+        },
+        {
+            "name": "biber",
+            "command": "biber",
+            "args": [
+                "--output-directory=output",
+                "%DOCFILE%"
+            ]
         }
-    ]
+    ],
+    "latex-workshop.latexindent.path": "/opt/homebrew/bin/latexindent",
+    "latex-workshop.bibtex-format.sort.enabled": true,
+    "latex-workshop.bibtex-format.trailingComma": false,
+    "latex-workshop.bibtex-format.tab": "4 spaces",
+    "latex-workshop.bibtex-format.align-equal.enabled": true,
+    "latex-workshop.bibtex-format.surround": "Quotation marks",
+    "latex-workshop.bibtex-format.case": "lowercase",
+    "latex-workshop.bibtex-fields.sort.enabled": true,
+    "latex-workshop.bibtex-entries.first": [
+        "xdata",
+        "string"
+    ],
+    //  === Linting ===
+    "latex-workshop.check.duplicatedLabels.enabled": true,
+    "latex-workshop.linting.run": "onSave",
+    "latex-workshop.linting.delay": 500,
+    "latex-workshop.linting.chktex.enabled": true,
+    "latex-workshop.linting.chktex.exec.path": "chktex",
+    "latex-workshop.linting.chktex.exec.args": [
+        "-wall",
+        "-n22",
+        "-n30",
+        "-e16",
+        "-q"
+    ],
+    "latex-workshop.linting.chktex.convertOutput.column.enabled": true,
+    "latex-workshop.linting.chktex.convertOutput.column.chktexrcTabSize": -1,
+    "latex-workshop.linting.lacheck.enabled": true,
+    "latex-workshop.linting.lacheck.exec.path": "lacheck",
 }

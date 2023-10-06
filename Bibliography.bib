@@ -1,27 +1,58 @@
-@book{sampleBook,
-    author    = {Author, Some},
-    publisher = {Sample Publisher},
-    title     = {Sample Book Title},
-    year      = {2023}
+@article{sampleArticle,
+    author  = "Author, Some",
+    journal = "Sample Journal",
+    title   = "Sample Article Title",
+    year    = "2023"
 }
 
-@article{sampleArticle,
-    author  = {Author, Some},
-    journal = {Sample Journal},
-    title   = {Sample Article Title},
-    year    = {2023}
+@book{sampleBook,
+    author    = "Author, Some",
+    publisher = "Sample Publisher",
+    title     = "Sample Book Title",
+    year      = "2023"
 }
 
 @inproceedings{sampleConference,
-    author    = {Author, Some},
-    booktitle = {Sample Conference},
-    title     = {Sample Conference Paper Title},
-    year      = {2023}
+    author    = "Author, Some",
+    booktitle = "Sample Conference",
+    title     = "Sample Conference Paper Title",
+    year      = "2023"
 }
-
 @misc{sampleWeb,
-    author = {Author, Some},
-    title  = {Sample Web Page Title},
-    url    = {https://www.sample.com},
-    year   = {2023}
+    author = "Author, Some",
+    title  = "Sample Web Page Title",
+    url    = "https://www.sample.com",
+    year   = "2023"
 }
+%*********************************************************************************************%
+%******************************** CITATION TYPES GUIDE **************************************%
+%*********************************************************************************************%
+%
+% This section provides a quick guide on different citation types using biblatex:
+%
+% 1. Basic Citation:
+%    - Command: \cite{key}
+%    - Function: Inserts a reference to the work identified by the key.
+%    - Example: \cite{sampleArticle}
+%
+% 2. Author-Year Citation:
+%    - Command: \textcite{key}
+%    - Function: Inserts the author(s) and the year of the work identified by the key.
+%    - Example: \textcite{sampleArticle}
+%
+% 3. Author-Only and Year-Only:
+%    - Commands:
+%        \citeauthor{key}  % Prints the author's name(s)
+%        \citeyear{key}    % Prints the year of publication
+%    - Example:
+%        \citeauthor{sampleArticle}
+%        \citeyear{sampleArticle}
+%
+% 4. Multiple Citations:
+%    - Command: \cite{key1,key2,key3}
+%    - Function: Allows citing multiple works at once.
+%    - Example: \cite{sampleArticle,sampleBook,sampleConference}
+%
+% Note: Replace 'key', 'key1', 'key2', 'key3' with the respective citation keys from your .bib file.
+%
+%*********************************************************************************************%
